@@ -9,14 +9,19 @@ const assignment = {};
  * 
  * Calculate and return the sum of the numbers in an array.
  * If you did Challenge - 1, remove the comment in the line just after this function
- * 
- * @param {Array} arrayOfNumbers the array of numbers to sum
- * @returns number the sum of the numbers
  */
+@param {Array} arrayOfNumbers the array of numbers to sum
+@returns number the sum of the numbers
+ 
+let arrayOfNumbers = [1,2,3,4,5,6];
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  //return arrayOfNumbers.length;
+let sum = 0;
+for (let i = 0; i < arrayOfNumbers.length; i++) {sum += arrayOfNumbers[i];}
+console.log(sum);
+  return (sum)
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
@@ -27,10 +32,19 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
+let arrayOfNumbers = [1,2,3,4,5,6];
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+const even = [];
+
+arrayOfNumbers.forEach(number => {
+  if (number % 2 == 0) {
+    even.push(number);
+  }
+});
+console.log(even);
+    return even;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+ assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
